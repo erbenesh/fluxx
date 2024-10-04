@@ -1,1156 +1,869 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+}
 
+
+body{
+    width: 100%;
+    height: 100%;
     background-color: #0F1117;
+}
+
+.wrapper {
+    position: relative;
     font-family: "Roboto";
     font-style: normal;
     color: #fff;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
 }
 
-/*MENU BAR*/
-
-.menu_bar{
-    position: flex;
+header {
+    position: relative;
+    display: flex;
     width: 100%;
-    height: 150px;
-    flex: 1 0 auto;
+    height: 160px;
+    box-sizing: border-box;
+    padding-left: 320px;
+    padding-right: 320px;
+    padding-top: 55px;
     background: #2D303C;
+    z-index: 500;
 }
 
-.big_logo{
+header .big_logo{
 
-    position: absolute;
+    position: relative;
+    display: inline-block;
     width: 161px;
     height: 65px;
-    left: 15%;
-    top: 55px;
-    
 }
-    
-.bar_links{
-    
+
+header nav {
+
+    position: relative;
+    display: inline-block;
+    height: 25px;
+    margin-top: 35px;
+    margin-left: 485px;
+}
+
+header nav ul {
+
+    position: relative;
     display: flex;
-    flex-direction:row;
-    gap: 120px;
-
-    position: absolute;
-    height: 40px;
-    left: 55%;
-    top: 87px;
-
-    cursor: pointer;
-    
+    width: auto;
+    column-gap: 120px;
 }
-    
-.bar_link{
-    
-    text-decoration: none;
-    font-family: 'Roboto';
-    font-style: normal;
+
+header nav ul li {
+
+    position: relative;
+    display: inline-block;
+    width: auto;
+    list-style: none;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    /* or 150% */
-        
-    color: #FFFFFF;
-        
+    cursor: pointer;
 }
 
-/*MAIN*/
-
-.main{
-
-position: absolute;
-width: 100%;
-height: 950px;
-top: 150px;
-
-background: #000000;
-overflow: hidden;
-
+main {
+    position: relative;  
 }
 
-.moon_pic{
+main .start-block {
+    position: relative;
+    width: auto;
+    height: 824px;
+    box-sizing: border-box;
+    padding-left: 320px;
+    padding-right: 320px;
+    background: #000000;
+}
 
+main .start-block .moon-pic {
     position: absolute;
-    width: 572px;
-    height: 560px;
-    left: 55%;
-    top: 10%;
-    
+    width: 672px;
+    height: 660px;
+    margin-top: 50px;
+    margin-left: 650px;
     transform: rotate(1.09deg);
-    
+    pointer-events: none;
 }
-    
-.h1_main{
-    
-    position: absolute;
-    width: 563px;
-    height: 24px;
-    left: 15%;
-    top: 15%;
-    
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
+        
+main .start-block h1 {
+    position: relative;
+    width: auto;
+    height: 54px;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 24px;
-    
-    color: #FFFFFF;
-    
+    font-size: 54px;
+    line-height: 54px;
+    top: 120px;
 }
-    
-    
-.h4_main{
-    
-    position: absolute;
+        
+main .start-block h4 {
+    position: relative;
     width: 219px;
     height: 51px;
-    left: 15%;
-    top: 25%;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22.4056px;
+    font-weight: 500;
+    font-size: 26px;
     line-height: 30px;
-    
     color: #F5821F;
-    
+    top: 170px;
 }
-
-.order_button{
-
-    flex-direction: row;
-    align-items: center;
-    padding: 8px 12px;
-    gap: 10px;
     
-    font-family: "Roboto", system-ui;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 25px;
-    color: #fff;
-    
-    position: absolute;
+main .start-block .order_button {
+    position: relative;
     width: 220px;
     height: 60px;
-    left: 15%;
-    top: 60%;
-    
-    border: 1px solid #F69139;
+    top: 480px;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 8px 12px;
+    border: none;
     background: #F69139;
-    border-radius: 4px;
-    
-    
-    cursor: pointer;
-    
-}
-
-.order_button:hover {
-    border: 1px solid #f639a1;
-    background-color: #f639a1;
     color: #fff;
-  }
-
-/*ABOUT GAME*/
-
-.about_game{
-
-position: absolute;
-width: 100%;
-height: 650px;
-top: 950px;
-
-background: #6C6D77;
-overflow: hidden;
-
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
 }
 
-.about_game_prop{
-
-    position: absolute;
-    width: 118px;
-    height: 196px;
-    left: 75%;
-    top: 20%;
-
-    display: flex;
-    flex-direction: column; /* Размещаем элементы в колонку */
-    row-gap: 50px; /* Отступ между рядами */
-    
+main .start-block .order_button:hover {
+    background-color: #f639a1;
 }
 
-.h1_agame{
+main .about_game {
 
-    position: absolute;
+    position: relative;
+    width: auto;
+    height: 600px;
+    padding-left: 320px;
+    padding-right: 320px;
+    background: #6C6D77;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+main .about_game h1 {
+
+    position: relative;
     width: 240px;
     height: 58px;
-    left: 15%;
-    top: 10px;
-    
+    margin-top: 40px;
     font-family: 'Alegreya';
-    font-style: normal;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 58px;
     line-height: 58px;
-    
-    color: #FFFFFF;
-    
 }
 
-.h4_agame_h{
+main .about_game h4 {
 
-    position: absolute;
-    width: 640px;
-    height: 408px;
-    left: 15%;
-    top: 150px;
-    
-    font-family: "Roboto", system-ui;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 24px;
-    
-    color: #FFFFFF;
-
-}
-
-.h4_agame{
-
-    position: absolute;
-    width: 630px;
-    height: 408px;
-    left: 15%;
-    top: 150px;
-    
-    font-family: "Roboto", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 24px;
-    
-    color: #FFFFFF;
-    
-}
-
-.h4_agame_tasks{
-
-    position: absolute;
-    width: 634px;
-    height: 408px;
-    left: 15%;
-    top: 320px;
-    
-    font-family: "Roboto", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 24px;
-    
-    color: #FFFFFF;
-
-    
-
-}
-
-.agame_tasks{
-
-    font-family: "Roboto", system-ui;
-    font-weight: 700;
-    font-style: normal;
-
-}
-
-.about_vector1{
-
-position: absolute;
-width: 1663px;
-height: 599;
-left: -10%;
-top: 70%;
-
-}
-
-.about_age{
-
-position: absolute;
-width: 82px;
-height: 76px;
-left: -85%;
-top: -5%;
-
-}
-
-.about_group{
-
-position: absolute;
-width: 86px;
-height: 86px;
-left: -85%;
-top: 45%;
-    
-}
-
-.about_time{
-
-    position: absolute;
-    width: 80px;
-    height: 75px;
-    left: -85%;
-    top: 95%;
-    
-}
-
-.about_vector2{
-
-position: absolute;
-width: 1356px;
-height: 562px;
-left: 20%;
-bottom: 80%;
-transform: rotate(-2.18deg);
-    
-}
-
-/*GAME RULES*/
-
-.game_rules{
-
-position: absolute;
-width: 100%;
-height: 1250px;
-top: 1540px;
-
-}
-
-.h1_rules{
-
-position: absolute;
-width: 729px;
-height: 58px;
-left: 15%;
-top: 100px;
-
-font-family: 'Alegreya';
-font-style: normal;
-font-weight: 700;
-font-size: 50px;
-line-height: 58px;
-
-color: #FFFFFF;
-
-}
-
-.h3_forbegin{
-    position: absolute;
-    width: 200px;
-    height: 143px;
-    left: 40%;
-    top: 280px;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    
-    color: #FFFFFF;
-
-}
-
-.h4_forbegin{
-
-position: absolute;
-width: 790px;
-height: 143px;
-left: 40%;
-top: 330px;
-
-font-family: "Roboto", system-ui;
-font-weight: 400;
-font-style: normal;
-font-size: 16px;
-line-height: 24px;
-
-color: #FFFFFF;
-
-}
-
-.h4_gameprocess{
-
-position: absolute;
-width: 730px;
-height: 168px;
-left: 15%;
-top: 530px;
-
-font-family: "Roboto", system-ui;
-font-weight: 400;
-font-style: normal;
-font-size: 16px;
-line-height: 24px;
-
-color: #FFFFFF;
-
-}
-
-.h3_gp{
-    position: absolute;
-    width: 200px;
-    height: 143px;
-    left: 15%;
-    top: 480px;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    
-    color: #FFFFFF;
-
-}
-
-.h4_steps{
-
-position: absolute;
-width: 730px;
-height: 192px;
-left: 40%;
-top: 830px;
-
-font-family: "Roboto", system-ui;
-font-weight: 400;
-font-style: normal;
-font-size: 16px;
-line-height: 24px;
-
-color: #FFFFFF;
-
-}
-
-.h3_steps{
-
-    position: absolute;
-    width: 730px;
-    height: 192px;
-    left: 40%;
-    top: 780px;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    
-    color: #FFFFFF;
-    
-}
-
-.h4_towin{
-
-position: absolute;
-width: 735px;
-height: 96px;
-left: 15%;
-top: 1130px;
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 24px;
-
-color: #FFFFFF;
-
-}
-
-.h3_towin{
-
-    position: absolute;
+    position: relative;
     width: 735px;
+    height: auto;
+    margin-top: 50px;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 28px;
+}
+
+main .about_game .game_tasks{
+
+    position: relative;
+    width: 390px;
+    height: auto;
+    margin-top: 30px;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 28px;
+}
+
+main .about_game .about_game_prop {
+
+    position: absolute;
+    top: 0;
+    margin-left: 970px;
+    margin-top: 80px;
+}
+
+.about_game_prop ul {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 118px;
+    height: 196px;
+    row-gap: 15px;
+}
+
+.about_game_prop ul li {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    column-gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+
+.age_prop_img {
+
+    width: 92px;
+    height: 86px;
+}
+
+.group_prop_img {
+    width: 96px;
     height: 96px;
-    left: 15%;
-    top: 1080px;
+}
+
+.time_prop_img {
+    width: 90px;
+    height: 85px;
+}
+
+.about_game_vector-top {
+
+    position: absolute;
+    width: 1356px;
+    height: 762px;
+    left: 500px;
+    bottom: 500px;
+    transform: rotate(-2deg);
+}
+
+.about_game_vector-bottom {
+
+    position: absolute;
+    width: 1263px;
+    height: 799px;
+    left: 200px;
+    top: 410px;
+}
+
+
+main .game_rules {
+
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-left: 320px;
+    padding-right: 320px;
+    padding-bottom: 70px;
+    box-sizing: border-box;
+
+}
+
+main .game_rules h1 {
+
+    position: relative;
+    width: 729px;
+    height: 56px;
+    font-family: 'Alegreya';
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 56px;
+    top: 70px;
+
+}
+
+main .game_rules ul {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 150px;
+}
+
+main .game_rules ul li {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     
-    font-family: 'Roboto';
-    font-style: normal;
+}
+
+main .game_rules ul li .rules_block_text {
+    
+}
+
+.rules_block_text h3 {
+
+    position: relative;
+    width: 200px;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
-    
-    color: #FFFFFF;
-    
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+
 }
+
+.rules_block_text p {
+
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    width: 780px;
+    letter-spacing: 0.5px;
+}
+
 
 .forbegin_pic{
 
-position: absolute;
-width: 213px;
-height: 228px;
-left: 18%;
-top: 250px;
-
+    position: relative;
+    width: 253px;
+    height: 268px;
+    padding-left: 70px;
+    padding-right: 125px;
 }
 
 .gameprocess_pic{
 
-position: absolute;
-width: 271px;
-height: 261px;
-left: 60%;
-top: 470px;
-
+    position: relative;
+    width: 311px;
+    height: 301px;
+    padding-left: 70px;
 }
 
-.steps_pic{
+.steps_pic {
 
-position: absolute;
-width: 222px;
-height: 242px;
-left: 18%;
-top: 780px;
+    position: relative;
+    width: 262px;
+    height: 282px;
+    padding-left: 70px;
+    padding-right: 125px;
 }
 
-.towin_pic{
+.towin_pic {
 
-position: absolute;
-width: 220px;
-height: 252px;
-left: 60%;
-top: 1020px;
-
+    position: relative;
+    width: 260px;
+    height: 292px;
+    padding-left: 70px;
 }
 
-.order_button_rules{
-
-    flex-direction: row;
-    align-items: center;
-    padding: 8px 12px;
-    gap: 10px;
+.order_button_rules {
     
-    font-family: "Roboto", system-ui;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 25px;
-    color: #fff;
-    
-    position: absolute;
+    position: relative;
     width: 220px;
     height: 60px;
-    left: 15%;
-    top: 1300px;
-    
-    border: 1px solid #F69139;
+    padding: 8px 12px;
+    font-weight: 700;
+    font-size: 25px;
+    border: none;
     background: #F69139;
     border-radius: 4px;
-    
-    
     cursor: pointer;
+    color: #FFFFFF;
+    transition: .3s;
     
 }
 
 .order_button_rules:hover {
-    border: 1px solid #f639a1;
     background-color: #f639a1;
-    color: #fff;
-  }
-
-/*GAME TABLE*/
-
-.game_table{
-
-position: absolute;
-width: 100%;
-height: 1025px;
-top: 3000px;
-
-background: #6C6D77;
-overflow: hidden;
-
 }
 
-.h1_table{
+main .game_table {
 
-    position: absolute;
-    width: 729px;
-    height: 58px;
-    left: 42%;
-    top: 50px;
-    
+    position: relative;
+    width: 100%;
+    height: 1025px;
+    padding-left: 320px;
+    padding-right: 320px;
+    box-sizing: border-box;
+    background: #6C6D77;
+    overflow: hidden;
+}
+
+main .game_table h1 {
+
+    position: relative;
+    width: 355px;
+    top: 100px;
+    margin: 0 auto;
     font-family: 'Alegreya';
-    font-style: normal;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 58px;
     line-height: 58px;
-    
-    color: #FFFFFF;    
+    letter-spacing: 1px;
+    z-index: 300;
 }
 
-.table_vector1_pic{
+.table_vector_top {
+
+    position: absolute;
+    width: 1818px;
+    height: 1171px;
+    right: 160px;
+    bottom: 475px;
+}
+
+.table_vector_bottom{
 
     position: absolute;
     width: 1818px;
     height: 1071px;
-    left: -10%;
-    bottom: 500px;
-
-}
-
-.table_vector2_pic{
-
-    position: absolute;
-    width: 1818px;
-    height: 1071px;
-    left: 20%;
-    top: 460px;
+    left: 160px;
+    top: 625px;
 
 }
 
 .table_fluxx_pic{
 
-position: absolute;
-width: 1090px;
-height: 646px;
-left: 20%;
-top: 220px;
-
-}
-
-/*GAME PACKAGE*/
-
-.game_package{
-
-position: absolute;
-width: 100%;
-height: 1025px;
-top: 4025px;
-
-}
-
-.h1_package{
-
-    position: absolute;
-    width: 729px;
-    height: 58px;
-    left: 40%;
-    top: 50px;
-    
-    font-family: 'Alegreya';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 58px;
-    
-    color: #FFFFFF;    
-}
-
-.package_pic{
-
-    position: absolute;
+    position: relative;
     width: 1090px;
     height: 646px;
-    left: 22%;
-    top: 250px;
-}
-
-/*CARDS DESCRIPTION*/
-
-.cards_description{
-
-position: absolute;
-width: 100%;
-height: 1025px;
-top: 5050px;
-
-background: #6C6D77;
-overflow: hidden;
+    left: 100px;
+    top: 220px;
 
 }
 
-.h1_description{
+main .game_package {
 
-    position: absolute;
-    width: 729px;
-    height: 58px;
-    left: 40%;
-    top: 55px;
-    
-    font-family: 'Alegreya';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 58px;
-    
-    color: #FFFFFF;    
-}
-
-.cards{
-
-    display: grid;
-    grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 250px 250px 250px;
+    position: relative;
     width: 100%;
-    column-gap: 440px;
-    row-gap: 100px; /* Отступ между рядами */
-    bottom: 400px;
-    transition: 0.2s;
-    position: relative;
-    left: 6%;
-    top: 250px;
+    height: 825px;
+    padding-left: 320px;
+    padding-right: 320px;
+    box-sizing: border-box;
 }
 
-.card{
+main .game_package h1 {
 
-    width: 520px;
-    min-height: 250px;
-    display: flex;
-    flex-direction: column; /* Размещаем элементы в колонку */
-    transition: 0.2s;
     position: relative;
-
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
+    width: 450px;
+    height: 58px;
+    margin: 0 auto;
+    top: 100px;
+    font-family: 'Alegreya';
     font-weight: 700;
-    font-size: 24px;
-
+    font-size: 58px;
+    line-height: 58px;
 }
 
-.description{
+.package_pic {
 
-    font-family: "Roboto", system-ui;
+    position: relative;
+    width: 1090px;
+    height: 646px;
+    left: 70px;
+    margin-top: 100px;
+}
+
+main .cards_description {
+
+    position: relative;
+    width: 100%;
+    height: 825px;
+    padding-left: 320px;
+    padding-right: 320px;
+    box-sizing: border-box;
+
+    background: #6C6D77;
+    overflow: hidden;
+}
+
+main .cards_description h1 {
+
+    position: relative;
+    width: 400px;
+    height: 58px;
+    margin: 0 auto;
+    top: 70px;
+    font-family: 'Alegreya';
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 58px;
+    letter-spacing: 1px;
+    z-index: 100;
+}
+
+main .cards_description .cards {
+
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 170px 170px 170px;
+    max-height: 450px;
+    column-gap: 30px;
+    row-gap: 120px;
+    top: 150px;
+    z-index: 100;
+}
+
+main .cards_description .cards .card {
+
+    display: flex;
+    flex-direction: column; 
+    row-gap: 20px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+}
+
+.card h4 {
+    font-weight: 700;
+}
+
+.description {
+
     font-weight: 400;
-    font-style: normal;
 }
 
-.des_vector1{
+.description_vector_top {
 
     position: absolute;
-    width: 1818px;
+    width: 1418px;
     height: 1071px;
-    left: 20%;
-    bottom: 400px;
-    
+    left: 500px;
+    bottom: 280px;
 }
 
-.des_vector2{
+.description_vector_bottom {
 
     position: absolute;
-    width: 2018px;
+    width: 1618px;
     height: 1271px;
-    left: -10%;
-    top: 400px;
+    right: 300px;
+    top: 160px;
+}
+
+main .reviews {
+
+    position: relative;
+    width: 100%;
+    height: 1025px;
+    padding-left: 320px;
+    padding-right: 320px;
+    box-sizing: border-box;
 
 }
 
-/*REVIEWS*/
+main .reviews h1 {
 
-.reviews{
-
-position: absolute;
-width: 100%;
-height: 1025px;
-top: 6075px;
-
-}
-
-.h1_review{
-
-    position: absolute;
+    position: relative;
     width: 729px;
     height: 58px;
-    left: 15%;
-    top: 55px;
-    
+    top: 100px;
     font-family: 'Alegreya';
-    font-style: normal;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 58px;
     line-height: 58px;
-    
-    color: #FFFFFF;   
 }
 
-.cards_review{
+main .reviews .cards_review {
 
+    position: relative;
     display: grid;
     grid-template-columns: 150px 150px 150px;
     grid-template-rows: 250px;
     width: 100%;
-    column-gap: 350px;
-    row-gap: 100px; /* Отступ между рядами */
-    bottom: 400px;
-    transition: 0.2s;
-    position: relative;
-    left: 10%;
-    top: 500px;
+    column-gap: 300px;
+    top: 150px;
 }
 
-.review_card{
+.cards_review .review_card {
 
-    width: 250px;
-    min-height: 250px;
-    display: flex;
-    flex-direction: column; /* Размещаем элементы в колонку */
-    transition: 0.2s;
     position: relative;
-
-    font-family: "Roboto", system-ui;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 625px;
     font-weight: 400;
     font-style: italic;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
-
-}
-
-.rev_name{
-    position: relative;
-    width: 250px;
-    background: #C4C4C4;
-    border: 10px solid #C4C4C4;
-    color: #000000;
-    left: 40%;
-}
-
-.rev{
-
-    width: 425px;
-    background: #C4C4C4;
-    border: 20px solid #C4C4C4;
-    color: #000000;
-
-}
-
-.review_photo{
-
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    background-color: #000000;
-    border-radius: 180px;
-    overflow: hidden;
-    left: 45%;
-    bottom: 250px;
-}
-
-.add_review_button{
-
-    flex-direction: row;
     align-items: center;
+    transition: 0.2s;
+
+}
+
+.review_card .review_photo{
+
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    overflow: hidden;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.review_card .rev_name{
+    position: relative;
+    width: 200px;
+    background: #C4C4C4;
+    padding: 10px;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.review_card .rev{
+
+    width: 300px;
+    background: #C4C4C4;
+    padding: 10px;
+    color: #000000;
+
+}
+
+main .reviews .add_review_button { 
+
+    position: relative;
+    width: 230px;
+    height: 57px;
     padding: 8px 12px;
-    gap: 10px;
-    
-    font-family: "Roboto", system-ui;
     font-weight: 700;
-    font-style: normal;
     font-size: 25px;
     color: #fff;
-    
-    position: absolute;
-    width: 229.49px;
-    height: 57px;
-    left: 70%;
-    top: 850px;
-    
-    border: 1px solid #00b2e3;
+    border: none;
     background: #00b2e3;
     border-radius: 4px;
-    
-    
     cursor: pointer;
+    transition: .3s;
+    float: right;
+    margin-top: 525px;
+    margin-right: 70px;
     
 }
 
-.add_review_button:hover {
-    border: 1px solid #f639a1;
+main .reviews .add_review_button:hover {
     background-color: #f639a1;
-    color: #fff;
 }
 
+main .fluxx_game {
 
-/*FLUXX GAME*/
-
-.fluxx_game{
-
-position: absolute;
-width: 100%;
-height: 1025px;
-top: 7100px;
-
-overflow: hidden;
-
-background: #6C6D77;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    padding-left: 320px;
+    padding-right: 320px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #6C6D77;
 
 }
 
-.h1_fluxxgame{
+main .fluxx_game h1 {
 
-    position: absolute;
+    position: relative;
     width: 729px;
     height: 58px;
-    left: 15%;
-    top: 100px;
-    
+    top: 70px;
     font-family: 'Alegreya';
-    font-style: normal;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 58px;
     line-height: 58px;
-    
-    color: #FFFFFF;   
+    z-index: 50;
 }
 
-.h4_fluxxgame{
+main .fluxx_game p {
 
-    position: absolute;
-    width: 450px;
+    position: relative;
+    width: 520px;
     height: 143px;
-    left: 35%;
-    top: 450px;
-    
-    font-family: "Roboto", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
+    top: 180px;
+    margin-left: 450px;
+    font-weight: 300;
+    font-size: 18px;
     line-height: 24px;
+    letter-spacing: 0.5px;
+    z-index: 50;
     
-    color: #FFFFFF; 
 }
 
-.h2_price{
+main .fluxx_game .right_block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    float: right;
+    align-items: end;
+    z-index: 50;
+}
 
-    position: absolute;
-    width: 729px;
-    height: 58px;
-    left: 75%;
-    top: 550px;
-    
-    font-family: "Roboto", system-ui;
-    font-weight: 700;
-    font-style: normal;
+main .fluxx_game b {
+
+    position: relative;
+    width: 150px;
+    height: 28px;
     font-size: 28px;
-    line-height: 58px;
-    
-    color: #FFFFFF;   
+    line-height: 28px;
+    margin-bottom: 50px;
 }
 
-.game_order_button{
+.game_order_button {
 
-    flex-direction: row;
+    position: relative;
+    width: 230px;
+    height: 57px;
     align-items: center;
     padding: 8px 12px;
-    gap: 10px;
-    
-    font-family: "Roboto", system-ui;
     font-weight: 700;
-    font-style: normal;
     font-size: 25px;
-    color: #fff;
-    
-    position: absolute;
-    width: 229.49px;
-    height: 57px;
-    left: 71%;
-    top: 650px;
-    
-    border: 1px solid #F69139;
+    border: none;
     background: #F69139;
+    color: #ffffff;
     border-radius: 4px;
-    
-    
     cursor: pointer;
-    
+    transition: .3s;
+    margin-bottom: 25px;
 }
 
 .game_order_button:hover {
-    border: 1px solid #f639a1;
     background-color: #f639a1;
-    color: #fff;
 }
 
 .addons_button{
 
-    flex-direction: row;
     align-items: center;
     padding: 8px 12px;
-    gap: 10px;
-    
-    font-family: "Roboto", system-ui;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 25px;
+    font-weight: 600;
+    font-size: 20px;
     color: #fff;
-    
-    position: absolute;
-    width: 400px;
-    height: 57px;
-    left: 62%;
-    top: 750px;
-    
-    border: 1px solid #00b2e3;
+    position: relative;
+    width: 280px;
+    height: 47px;
+    border: none;
     background: #00b2e3;
     border-radius: 4px;
-    
-    
     cursor: pointer;
+    transition: .3s;
     
 }
 
 .addons_button:hover {
-    border: 1px solid #f639a1;
     background-color: #f639a1;
-    color: #fff;
 }
 
-.game_vector1{
+
+.game_pack_pic {
+
+    position: relative;
+    width: 336px;
+    height: 336px;
+    margin-left: 50px;
+    z-index: 500;
+
+}
+
+.game_vector_top {
 
     position: absolute;
     width: 2018px;
+    height: 871px;
+    right: 50px;
+    bottom: 100px;
+}
+
+.game_vector_bottom {
+
+    position: absolute;
+    width: 2218px;
     height: 1071px;
-    left: -20%;
-    bottom: 300px;
-    
+    left: 100px;
+    top: 50px;
 }
 
-.game_vector2{
+main .order_form {
 
-    position: absolute;
-    width: 2018px;
-    height: 1271px;
-    left: -5%;
-    top: 500px;
-
+    position: relative;
+    width: 100%;
+    height: 600px;
+    padding-left: 320px;
+    padding-right: 320px;
+    box-sizing: border-box;
 }
 
-.game_pack_pic{
+main .order_form h1 {
 
-
-position: absolute;
-width: 336px;
-height: 336px;
-left: 15%;
-top: 350px;
-
-}
-
-/*ORDER FORM*/
-
-.order_form{
-
-position: absolute;
-width: 100%;
-height: 1025px;
-left: 0px;
-top: 8125px;
-
-}
-
-.h1_order_form{
-
-    position: absolute;
+    position: relative;
     width: 729px;
     height: 58px;
-    left: 15%;
     top: 100px;
     
     font-family: 'Alegreya';
-    font-style: normal;
     font-weight: 700;
-    font-size: 50px;
-    line-height: 58px;
-    
-    color: #FFFFFF;   
+    font-size: 58px;
+    line-height: 58px; 
 }
 
-.order_input_case{
-
-    display: grid;
-    grid-template-columns: 850px;
-    grid-template-rows: 50px 50px 50px;
-    width: 100%;
-    row-gap: 20px; /* Отступ между рядами */
-    bottom: 400px;
-    transition: 0.2s;
+main .order_form .order_input_case {
     position: relative;
-    left: 20%;
-    top: 450px;
-}
-
-.input{
-
-    font-size: 24px;
-    color: #000000; 
-    text-indent: 20px;
-}
-
-.order_form_button{
-
+    display: flex;
     flex-direction: row;
+    column-gap: 100px;
     align-items: center;
+    top: 200px;
+}
+
+.order_input_case .order_input_form {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 10px;
+    row-gap: 25px; 
+    margin: 0 auto;
+    left: 130px;
+    transition: 0.2s;
+}
+
+.order_input_form .input{
+
+    width: 580px;
+    font-size: 18px;
+    border: none;
+    color: #000000; 
+    padding: 10px;
+}
+
+.order_input_case .order_form_button {
+
+    position: relative;
+    text-align: center;
     padding: 8px 12px;
-    gap: 10px;
-    
-    font-family: "Roboto", system-ui;
     font-weight: 700;
-    font-style: normal;
     font-size: 25px;
-    color: #fff;
-    
-    position: absolute;
-    width: 229.49px;
+    width: 150px;
     height: 57px;
-    left: 71%;
-    top: 515px;
-    
-    border: 1px solid #F69139;
-    background: #F69139;
+    float: right;
     border-radius: 4px;
-    
-    cursor: pointer;
-    
-}
-
-.order_form_button:hover {
-    border: 1px solid #f639a1;
-    background-color: #f639a1;
+    border: none;
+    background: #F69139;
     color: #fff;
+    cursor: pointer;
+    transition: .3s;
+    
 }
 
+.order_input_case .order_form_button:hover {
+    background-color: #f639a1;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 50px 320px 50px 320px;
+    box-sizing: border-box;
+}
+
+.company,
 .contacts{
 
-position: absolute;
-left: 15%;
-right: 50%;
-top: 85%;
-bottom: 10%;
-
-font-family: "Roboto", system-ui;
-font-weight: 400;
-font-style: normal;
-font-size: 16px;
-line-height: 24px;
-
-color: #FFFFFF;
-}
-
-.company{
-
-position: absolute;
-left: 35%;
-right: 20;
-top: 85%;
-bottom: 10%;
-
-font-family: "Roboto", system-ui;
-font-weight: 400;
-font-style: normal;
-font-size: 16px;
-line-height: 24px;
-
-color: #FFFFFF;
-
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-right: 100px;
 }

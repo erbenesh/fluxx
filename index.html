@@ -5,245 +5,334 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLUXX board game</title>
     <link rel="icon" type="svg" href="/images/big_logo.svg">
-    <link rel="stylesheet" href="styles\styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="./styles/styles.css">
     <script src="./scripts/scripts.js"></script>
 </head>
 <body>
 
-    <div class="main">
-        <img class="moon_pic" src="images/main/moon.png" alt="moon">
-        <p class="h1_main">Игра по твоим правилам</p>
-        <p class="h4_main">Настольная игра</p>
+    <div class="wrapper">
 
-        <button class="order_button" id="#order" onclick="onLinkClickButton(event)">Сделать заказ</button>
+        <header>
 
-    </div>
-
-    <div class="about_game">
-        <img class="about_vector1" src="images/about/vector.svg" alt="vecor up">
-        <img class="about_vector2"  src="images/about/vector2.svg" alt="vector top">
-        <p class="h1_agame">Об игре</p>
-        <p class="h4_agame_h">Fluxx</p>
-        <p class="h4_agame">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- это настольная игра, где постоянно меняются условия победы.  
-            На середину стола выкладывается карта базовых правил и начинается игра. 
-            Все карты перемешиваются и в закрытую каждому участнику игры раздается по 3 карты,
-            остальные кладутся рубашкой вверх рядом с картой базовых правил, создавая игровую колоду.
-            Затем по часовой стрелки ходят все остальные до тех пор, 
-            пока не будут выполнены все условия победы.      
-        </p>
-        <div class="h4_agame_tasks">
-            <p class="agame_tasks">Задачи игры</p>
-            <p>- взять из колоды нужное количество карт<br/>
-            - сыграть необходимое количество карт<br/>
-            - сбросить лишние карты<br/>
-            - отправить лишние карты со стола в сброс<br/></p>
-        </div>
-        <div class="about_game_prop">
-            <img class="about_age" src="images/about/age.png" alt="age">
-            <p class="age">8 лет</p>
-            <img class="about_group" src="images/about/group.png" alt="group">
-            <p class="players">от 2 - 6 игроков</p>
-            <img class="about_time" src="images/about/time.png" alt="time">
-            <p class="time">от 5 - 30 минут</p>
-
-        </div>
+            <a href="#">
+                <img class="big_logo" src="images/big_logo.svg" alt="big logo">
+            </a>  
+    
+            <nav>
+    
+                <ul>
         
-    </div>
-
-    <div class="game_rules">
-
-        <p class="h1_rules">
-            Правила игры
-        </p>
-
-            <img class="forbegin_pic" src="images/rules/forbegin.png" alt="for begin">
-            <p class="h3_forbegin">                
-                Подготовка к игре
-            </p>
-            <p class="h4_forbegin">
-                Выложи на середину стола карту базовых правил (одна из двух карт со светлым оборотом). Хорошенько перетасуй колоду и сдай каждому игроку 3 карты. Колоду положи рядом с картой базовых правил лицевой стороной вни з — отсюда игроки будут тянуть карты.
-            </p>
-            <p class="h3_gp">
-                Игровой процесс
-            </p>
-            <p class="h4_gameprocess">
-                Будь готов — правила игры будут меняться прямо по ходу партии. Начальные правила очень просты, но с каждым ходом игра усложняется из-за карт, которые вводят новые правила и отменяют старые. Начни игру, как написано на карте базовых правил («Тяни 1 карту, сыграй 1 карту»). Передавай ход по часовой стрелке. Подстраивайся под все новые правила, которые будут добавляться всякий раз, когда кто-то играет карту.
-            </p>
-            <img class="gameprocess_pic" src="images/rules/gameprocess.png" alt="game process">
-            <img class="steps_pic" src="images/rules/steps.png" alt="steps">
-            <p class="h3_steps">Порядок хода</p>
-            <p class="h4_steps">
-                1. Вытяни карты из колоды (столько, сколько требуют текущие правила).<br/>
-                2. Сыграй карты с руки (столько, сколько требуют текущие правила). <br/>3. Сбрось с руки лишние карты, чтобы не превысить предел карт на руке (если есть).<br/>
-                4. Сбрось лишние сыгранные темы, чтобы не превысить предел тем (если есть). Дополнительные действия, требуемые картами новых правил, тем и т. д., выполняются в разные моменты хода.
-            </p>
-            <p class="h3_towin">Условия победы</p>
-            <p class="h4_towin">
-                Игра продолжается до тех пор, пока один из игроков не выполнит условия текущей цели. Как только цель достигнута, игрок тотчас становится победителем, даже если сейчас не его ход.
-            </p>
-            <img class="towin_pic" src="images/rules/towin.png" alt="to win">
-
-
-        <button class="order_button_rules" id="#order" onclick="onLinkClickButton(event)">Сделать заказ</button>
-
-    </div>
-
-    <div class="game_table">
-
-        <img class="table_vector1_pic" src="images/table/vector1.svg" alt="vector table">
-        <img class="table_vector2_pic" src="images/table/vector2.svg" alt="vector table 2">
-        <img class="table_fluxx_pic" src="images/table/tablefluxx.png" alt="fluxx table">
-
-        <p class="h1_table">Игровое поле</p>
-
-    </div>
-
-    <div class="game_package">
-
-        <img class="package_pic" src="images/package/package.png" alt="package">
-
-        <p class="h1_package">Упаковка и карты</p>
-
-    </div>
-
-    <div class="cards_description">
-
-        <img class="des_vector1" src="images/description/vector1.svg" alt="vector1_des">
-        <img class="des_vector2" src="images/description/vector2.svg" alt="vector2_des">
-
-        <p class="h1_description">Описание карт</p>
-
-        <div class="cards">
-            <div class="card">
-                <p>Действие</p>
-                <p class="description">
-                    Данный тип карт может как сильно повлиять на ход игры, так и не повлиять на него вовсе. Разыгрывая карту действия, игрок выполняет все условия, которые на ней написаны.
-                </p>
-            </div>
-
-            <div class="card">
-                <p>Цель</p>
-                <p class="description">
-                    Данный вид карты определяет условия победы. По ходу партии неоднократно будут разыгрываться цели и, так как цель должна быть одна, предыдущая всегда сбрасывается
-                </p>
-            </div>
-
-            <div class="card">
-                <p>Новое правило</p>
-                <p class="description">
-                    Это карты, которые определяют новый порядок действий игрока. Главное, чтобы старое правило не противоречило новому, в противном случае оно уходит в сброс.
-                </p>
-            </div>
-
-            <div class="card">
-                <p>Тема</p>
-                <p class="description">
-                    Это ключевая карта в игре, с помощью который игрок выигрывает партию. У одного игрока тем может быть сколько угодно, но побеждает тот, у кого их определенный набор.
-            </div>
-
-            <div class="card">
-                <p>Базовые правила</p>
-                <p class="description">
-                    С них начинается игра. Постепенно их вытесняют новые правила, но карта базовых правил всегда остается в центре стола.
-                </p>
-            </div>
-
-            <div class="card">
-                <p>Проблема</p>
-                <p class="description">
-                    Если темы помогают игроку выиграть, то карты проблемы наоборот, мешают ему это сделать.
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="reviews">
-        <p class="h1_review">Отзывы</p>
-        <div class="cards_review">
-            <div class="review_card">
-                <img class="review_photo" src="images/reviews/person.png" alt="person">
-                <p class="rev_name">Именитое имя</p>
-                <p class="rev">Классная настольная игра!
-                    Очень динамичная, и конец игры всегда непредсказуем </p>
-            </div>
-            <div class="review_card">
-                <img class="review_photo" src="images/reviews/person.png" alt="person">
-                <p class="rev_name">Именитое имя</p>
-                <p class="rev">Компактная. На то чтобы объяснить правила нужно 2 мин.
-                    Чтобы разнообразить вечер самое оно
-                    Для любителей нестандартного </p>
-            </div>
-            <div class="review_card">
-                <img class="review_photo" src="images/reviews/person.png" alt="person">
-                <p class="rev_name">Именитое имя</p>
-                <p class="rev">Довольно легка в освоении, если внимательно прочитать правила.
-                    Опять же правила написаны на самих картах. Удобно брать с собой в гости</p>
-            </div>
-        </div>
-        <button class="add_review_button">Оставить отзыв</button>
-
-    </div>
-
-    <div class="fluxx_game">
-
-        <img class="game_vector1" src="images/fluxxgame/vector1.svg" alt="vector1 game">
-        <img class="game_vector2" src="images/fluxxgame/vector2.svg" alt="vector2 game">
-        <img class="game_pack_pic" src="images/fluxxgame/pack.png" alt="pack">
-
-        <p class="h1_fluxxgame">Fluxx - настольная игра</p>
-
-        <p class="h4_fluxxgame">
-            Fluxx – это настольная игра с постоянно изменяющимися правилами, что выделяет ее среди  множества других игр. Правила в ней меняют сами игроки, выполняя определенные действия. 
-        </p>
-        <p class="h2_price">799 рублей</p>
-
-        <button class="game_order_button" id="#order" onclick="onLinkClickButton(event)">Сделать заказ</button>
-        <form action="additions.html" target="_blank">
-            <button class="addons_button">Посмотреть дополнения</button>
-        </form>
-
-    </div>
-
-    <div class="order_form">
-
-        <p class="h1_order_form">Форма для заказа</p>
-        <div class="order_input_case">
-            <input class="input" type="text" placeholder="Ваше имя">
-            <input class="input" type="email" placeholder="Почта">
-            <input class="input" type="tel" placeholder="Телефон">
-        </div>
-        <button class="order_form_button">Заказать!</button>
-
-        <p class="contacts">
-            моб., +7 (953) 000 00 00<br/>   
-            раб., +7 (495) 841 00 00    info@fluxx.com
-        </p>
-        <p class="company">
-            ООО”FLUXX” <br/>  
-            130580  г. Москва, ул. Каланчевская д. 13А 
-        </p>
-
-    </div>
-    <div class="menu_bar"> 
-
-        <img class="big_logo" src="images/big_logo.svg" alt="big logo">   
+                    <li href="#about_game" onclick="onLinkClickAGame(event)">Об игре</li>
+                    <li href="#reviews" onclick="onLinkClickReviews(event)">Отзывы</li>
+                    <li href="#contacts" onclick="onLinkClickContacts(event)">Контакты</li>
+            
+                </ul>
     
-        <div class="bar_links">
+            </nav>
     
-            <a href="#about_game" onclick="onLinkClickAGame(event)" class="bar_link">Об игре</a>
-            <a href="#reviews" onclick="onLinkClickReviews(event)" class="bar_link">Отзывы</a>
-            <a href="#contacts" onclick="onLinkClickContacts(event)" class="bar_link">Контакты</a>
+        </header>
     
-        </div>
+        <main>
     
+            <div class="start-block">
+                <img class="moon-pic" src="images/main/moon.png" alt="moon">
+                <h1>Игра по твоим правилам</h1>
+                <h4>Настольная игра</h4>
+        
+                <button class="order_button" id="#order" onclick="onLinkClickButton(event)">Сделать заказ</button>
+        
+            </div>
+        
+            <div class="about_game">
+
+                <h1>Об игре</h1>
+
+                <h4>
+                    <b>Fluxx</b> - это настольная игра, где постоянно меняются условия победы.  
+                    На середину стола выкладывается карта базовых правил и начинается игра. 
+                    Все карты перемешиваются и в закрытую каждому участнику игры раздается по 3 карты,
+                    остальные кладутся рубашкой вверх рядом с картой базовых правил, создавая игровую колоду.
+                    Затем по часовой стрелки ходят все остальные до тех пор, 
+                    пока не будут выполнены все условия победы.      
+                </h4>
+
+                <div class="game_tasks">
+
+                    <b>Задачи игры</b>
+                    <p>- взять из колоды нужное количество карт<br/>
+                    - сыграть необходимое количество карт<br/>
+                    - сбросить лишние карты<br/>
+                    - отправить лишние карты со стола в сброс<br/></p>
+
+                </div>
+
+                <div class="about_game_prop">
+
+                    <ul>
+                        <li>
+                            <img class="age_prop_img" src="images/about/age.svg" alt="age">
+                            <b>8 лет</b>
+                        </li>
+
+                        <li>
+                            <img class="group_prop_img" src="images/about/group.svg" alt="group">
+                            <b>от 2 - 6 игроков</b>
+                        </li>
+
+                        <li>
+                            <img class="time_prop_img" src="images/about/time.svg" alt="time">
+                            <b>от 5 - 30 минут</b> 
+                        </li>
+
+                    </ul>
+        
+                </div>
+
+                <img class="about_game_vector-top" src="images/about/vector2.svg" alt="">
+                <img class="about_game_vector-bottom" src="images/about/vector.svg" alt="">
+
+            </div>
+        
+            <div class="game_rules">
+        
+                <h1>Правила игры</h1>
+
+                <ul>
+
+                    <li>
+                        <img class="forbegin_pic" src="images/rules/forbegin.png" alt="for begin">
+                        <div class="rules_block_text">
+                            <h3>Подготовка к игре</h3>
+                            <p>
+                                Выложи на середину стола карту базовых правил (одна из двух карт со светлым оборотом). 
+                                Хорошенько перетасуй колоду и сдай каждому игроку 3 карты. 
+                                Колоду положи рядом с картой базовых правил лицевой стороной вни з — отсюда игроки будут тянуть карты.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rules_block_text">
+                            <h3>Игровой процесс</h3>
+                            <p>
+                                Будь готов — правила игры будут меняться прямо по ходу партии. Начальные правила очень просты, 
+                                но с каждым ходом игра усложняется из-за карт, которые вводят новые правила и отменяют старые. 
+                                Начни игру, как написано на карте базовых правил («Тяни 1 карту, сыграй 1 карту»). 
+                                Передавай ход по часовой стрелке. Подстраивайся под все новые правила, которые будут добавляться всякий раз, 
+                                когда кто-то играет карту.
+                            </p>
+                        </div>
+                        <img class="gameprocess_pic" src="images/rules/gameprocess.png" alt="game process">
+                    </li>
+                    <li>
+                        <img class="steps_pic" src="images/rules/steps.png" alt="steps">
+                        <div class="rules_block_text">
+                            <h3>Порядок хода</h3>
+                            <p>
+                                1. Вытяни карты из колоды (столько, сколько требуют текущие правила).<br/>
+                                2. Сыграй карты с руки (столько, сколько требуют текущие правила). <br/>
+                                3. Сбрось с руки лишние карты, чтобы не превысить предел карт на руке (если есть).<br/>
+                                4. Сбрось лишние сыгранные темы, чтобы не превысить предел тем (если есть). 
+                                Дополнительные действия, требуемые картами новых правил, тем и т. д., выполняются в разные моменты хода.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rules_block_text">
+                            <h3>Условия победы</h3>
+                            <p>
+                                Игра продолжается до тех пор, пока один из игроков не выполнит условия текущей цели. 
+                                Как только цель достигнута, игрок тотчас становится победителем, даже если сейчас не его ход.
+                            </p>
+                        </div>
+                        <img class="towin_pic" src="images/rules/towin.png" alt="to win">
+                    </li>
+
+                </ul>
+        
+                <button id="#order" class="order_button_rules" onclick="onLinkClickButton(event)">Сделать заказ</button>
+        
+            </div>
+        
+            <div class="game_table">
+        
+                <h1>Игровое поле</h1>
+
+                <img class="table_vector_top" src="images/table/vector1.svg" alt="vector table">
+                <img class="table_vector_bottom" src="images/table/vector2.svg" alt="vector table 2">
+                <img class="table_fluxx_pic" src="images/table/tablefluxx.png" alt="fluxx table">
+        
+            </div>
+        
+            <div class="game_package">
+        
+                <h1>Упаковка и карты</h1>
+
+                <img class="package_pic" src="images/package/package.png" alt="package">
+        
+            </div>
+        
+            <div class="cards_description">
+        
+                <h1>Описание карт</h1>
+        
+                <div class="cards">
+                    <div class="card">
+                        <h4>Действие</h4>
+                        <p class="description">
+                            Данный тип карт может как сильно повлиять на ход игры, так и не повлиять на него вовсе. Разыгрывая карту действия, игрок выполняет все условия, которые на ней написаны.
+                        </p>
+                    </div>
+        
+                    <div class="card">
+                        <h4>Цель</h4>
+                        <p class="description">
+                            Данный вид карты определяет условия победы. По ходу партии неоднократно будут разыгрываться цели и, так как цель должна быть одна, предыдущая всегда сбрасывается
+                        </p>
+                    </div>
+        
+                    <div class="card">
+                        <h4>Новое правило</h4>
+                        <p class="description">
+                            Это карты, которые определяют новый порядок действий игрока. Главное, чтобы старое правило не противоречило новому, в противном случае оно уходит в сброс.
+                        </p>
+                    </div>
+        
+                    <div class="card">
+                        <h4>Тема</h4>
+                        <p class="description">
+                            Это ключевая карта в игре, с помощью который игрок выигрывает партию. У одного игрока тем может быть сколько угодно, но побеждает тот, у кого их определенный набор.
+                    </div>
+        
+                    <div class="card">
+                        <h4>Базовые правила</h4>
+                        <p class="description">
+                            С них начинается игра. Постепенно их вытесняют новые правила, но карта базовых правил всегда остается в центре стола.
+                        </p>
+                    </div>
+        
+                    <div class="card">
+                        <h4>Проблема</h4>
+                        <p class="description">
+                            Если темы помогают игроку выиграть, то карты проблемы наоборот, мешают ему это сделать.
+                        </p>
+                    </div>
+                </div>
+
+                <img class="description_vector_top" src="images/description/vector1.svg" alt="vector1_des">
+                <img class="description_vector_bottom" src="images/description/vector2.svg" alt="vector2_des">
+        
+            </div>
+        
+            <div class="reviews">
+
+                <h1>Отзывы</h1>
+
+                <div class="cards_review">
+
+                    <div class="review_card">
+                        <img class="review_photo" src="images/reviews/person.png" alt="person">
+                        <p class="rev_name">Именитое имя</p>
+                        <p class="rev">
+                            Классная настольная игра!
+                            Очень динамичная, и конец игры всегда непредсказуем 
+                        </p>
+                    </div>
+
+                    <div class="review_card">
+                        <img class="review_photo" src="images/reviews/person.png" alt="person">
+                        <p class="rev_name">Именитое имя</p>
+                        <p class="rev">
+                            Компактная. На то чтобы объяснить правила нужно 2 мин.
+                            Чтобы разнообразить вечер самое оно
+                            Для любителей нестандартного 
+                        </p>
+                    </div>
+                    
+                    <div class="review_card">
+                        <img class="review_photo" src="images/reviews/person.png" alt="person">
+                        <p class="rev_name">Именитое имя</p>
+                        <p class="rev">
+                            Довольно легка в освоении, если внимательно прочитать правила.
+                            Опять же правила написаны на самих картах. Удобно брать с собой в гости
+                        </p>
+                    </div>
+
+                </div>
+
+                <button class="add_review_button">Оставить отзыв</button>
+        
+            </div>
+        
+            <div class="fluxx_game">
+        
+                <h1>Fluxx - настольная игра</h1>
+
+                <p>
+                    Fluxx – это настольная игра с постоянно изменяющимися правилами, что выделяет ее среди множества других игр. 
+                    Правила в ней меняют сами игроки, выполняя определенные действия. 
+                </p>
+        
+                <div class="right_block">
+    
+                    <b>799 рублей</b>
+            
+                    <button class="game_order_button" id="#order" onclick="onLinkClickButton(event)">Сделать заказ</button>
+    
+                    <form action="additions.html" target="_blank">
+                        <button class="addons_button">Посмотреть дополнения</button>
+                    </form>
+
+                </div>
+
+                <img class="game_pack_pic" src="images/fluxxgame/pack.png" alt="game pack">
+                <img class="game_vector_top" src="images/fluxxgame/vector1.svg" alt="">
+                <img class="game_vector_bottom" src="images/fluxxgame/vector2.svg" alt="">
+        
+            </div>
+        
+            <div class="order_form">
+        
+                <h1>Форма для заказа</h1>
+
+                <div class="order_input_case">
+
+                    <form class="order_input_form">
+                        <input class="input" type="text" placeholder="Ваше имя">
+                        <input class="input" type="email" placeholder="Почта">
+                        <input class="input" type="tel" placeholder="Телефон">
+                    </form>
+    
+                    <button class="order_form_button">Заказать!</button>
+            
+                </div>
+            </div>
+    
+        </main>
+    
+        <footer>
+    
+            <div class="contacts_block">
+
+                <p class="contacts">
+                    моб., +7 (953) 000 00 00<br/>   
+                    раб., +7 (495) 841 00 00    info@fluxx.com
+                </p>
+                <p class="company">
+                    <b>ООО”FLUXX”</b> <br/>  
+                    130580  г. Москва, ул. Каланчевская д. 13А 
+                </p>
+
+            </div>
+    
+        </footer>
+
     </div>
+
 </body>
 </html>
